@@ -1,0 +1,26 @@
+{
+  "rules": {
+    "games": {
+      "$id": {
+        ".validate": "newData.isNumber() && (data.exists() && (newData.val() === data.val() + 1)) || (!data.exists() && newData.val() == 1)",
+        ".write": true
+      },
+    },
+    "leaderboard": {
+      "$id": {
+        "name": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length < 33"
+        },
+        "push": {
+          ".validate": "data.exists() && newData.isString() || !data.exists() && newData.child('push').val() == null",
+        },
+        "score": {
+          ".validate": "root.child('games').child(newData.parent().child('push').val()).val() == newData.val()",
+        },
+        ".write": "!data.exists() || newData.child('push').val() == null",
+      },
+      ".read": true,
+      ".indexOn": "score"
+    }
+  }
+}
