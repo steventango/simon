@@ -3,19 +3,19 @@
   "short_name": "Simon+",
   "icons": [
     {
-      "src": "/wapps/simon/assets/images/simon-192.png",
+      "src": "/simon/assets/images/simon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/wapps/simon/assets/images/simon-512.png",
+      "src": "/simon/assets/images/simon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/wapps/simon/dev/?utm_source=pwa",
+  "start_url": "/simon/dev/?utm_source=pwa",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#fff",
-  "scope": "/wapps/simon/dev/"
+  "scope": "/simon/dev/"
 }

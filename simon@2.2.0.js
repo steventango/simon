@@ -154,7 +154,7 @@ var simon = {
       navigator.share({
         title: 'Simon+',
         text: 'Beat my record in Simon+!',
-        url: 'https://steventang.tk/wapps/simon/',
+        url: 'https://steventang.tk/simon/',
       }).catch((error) => console.warn(error));
     } else if (!/Snapchat/.test(navigator.userAgent)) {
       simon.elements.bottom_sheet.show();
@@ -334,7 +334,7 @@ var simon = {
   },
   init() {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/wapps/simon/dev/sw.js').then(function(registration) {
+      navigator.serviceWorker.register('/simon/dev/sw.js').then(function(registration) {
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
       }, function(err) {
         console.log('ServiceWorker registration failed: ', err);
